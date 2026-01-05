@@ -3,8 +3,8 @@
 
 À compléter :
 
-- NOM :
-- PRÉNOM :
-- GROUPE :
+- NOM : Laurent
+- PRÉNOM : Leslie
+- GROUPE : A1
 - URL du site :
 - URL FIGMA :

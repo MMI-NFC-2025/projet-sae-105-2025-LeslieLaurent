@@ -1,0 +1,188 @@
+/* Pour garder la forme d'origine mais réduire la taille de l'image du dernier documentaire */
+.film-poster--original {
+	width: 120px !important;
+	min-width: 100px !important;
+	max-width: 140px !important;
+	height: auto !important;
+	aspect-ratio: unset !important;
+	background: var(--body-text);
+	margin-right: 0.1rem;
+	display: flex;
+	align-items: center;
+}
+.film-poster--original img {
+	width: 100%;
+	height: auto;
+	max-height: 120px;
+	object-fit: contain;
+	object-position: center center;
+	display: block;
+	border-radius: 6px;
+}
+/* Film Cards Component */
+
+.film-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: var(--space-2xl);
+	margin-top: var(--space-2xl);
+}
+
+ .film-card {
+	display: flex;
+	flex-direction: row;
+	background: #fff;
+	border-radius: var(--radius);
+	overflow: hidden;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 4px solid #fff;
+	margin-bottom: 2rem;
+}
+
+/* Blue and red variants for alternating film cards */
+.film-card--blue {
+	background: var(--navy) !important;
+	color: var(--white) !important;
+}
+.film-card--red {
+	background: var(--red) !important;
+	color: var(--white) !important;
+}
+
+ .film-card--blue .film-info h3,
+ .film-card--red .film-info h3 {
+	color: var(--white);
+	font-size: var(--h3);
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.film-card--blue .film-info p,
+.film-card--red .film-info p {
+	color: var(--white);
+	font-size: var(--txt-info);
+}
+
+.film-card--blue .film-meta,
+.film-card--red .film-meta {
+	color: var(--white);
+}
+
+/* Toujours aligner le texte à droite de l'image */
+ .film-card {
+	flex-direction: row;
+	align-items: center;
+}
+ .film-poster {
+	margin-right: 0.1rem;
+}
+.film-info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1.5rem 1.5rem 1.5rem 0;
+}
+
+.film-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.film-poster {
+	width: 120px;
+	min-width: 100px;
+	max-width: 140px;
+	height: 180px;
+	overflow: hidden;
+	background: #000;
+	aspect-ratio: unset;
+}
+
+.film-poster img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+	display: block;
+	transition: transform 0.3s ease;
+	border-radius: 6px;
+}
+@media (max-width: 900px) {
+	.film-poster {
+		width: 90px;
+		min-width: 70px;
+		max-width: 110px;
+		height: 130px;
+	}
+}
+
+.film-card:hover .film-poster img {
+	transform: scale(1.05);
+}
+
+.film-info {
+	padding: var(--space-xl);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+}
+
+ .film-info h3 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--navy);
+	margin: 0;
+	line-height: 1.3;
+}
+
+.film-meta {
+	font-size: 0.875rem;
+	color: var(--muted);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin: 0;
+}
+
+.film-info > p:last-child {
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: var(--text);
+	margin: var(--space-sm) 0 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.film-grid {
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: var(--space-xl);
+	}
+
+	.film-info {
+		padding: var(--space-lg);
+	}
+
+	.film-info h3 {
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.film-grid {
+		grid-template-columns: 1fr;
+		gap: var(--space-lg);
+	}
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+	.film-card:hover {
+		transform: none;
+	}
+
+	.film-card:hover .film-poster img {
+		transform: none;
+	}
+}

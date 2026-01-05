@@ -1,0 +1,131 @@
+.timeline-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0;
+}
+.timeline-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 2.5em;
+  margin-bottom: 1em;
+  width: 100%;
+  max-width: 600px;
+  justify-content: center;
+}
+.timeline-carousel-arrow {
+  background: #0a3a66;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 1.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.timeline-carousel-arrow:hover {
+  background: #f7c873;
+  color: #0a3a66;
+}
+.timeline-carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.4;
+  transition: opacity 0.2s, transform 0.2s;
+  cursor: pointer;
+  outline: none;
+}
+.timeline-carousel-item.active {
+  opacity: 1;
+  transform: scale(1.22);
+  z-index: 2;
+  cursor: default;
+  outline: none;
+}
+.timeline-carousel-item.prev, .timeline-carousel-item.next {
+  opacity: 0.7;
+}
+.timeline-carousel-item:focus {
+  outline: 2px solid #0a3a66;
+}
+.timeline-carousel-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f7c873;
+  box-shadow: 0 2px 10px rgba(10,58,102,0.10);
+  margin-bottom: 0.5em;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.timeline-carousel-date {
+  font-size: 1.1em;
+  color: #0a3a66;
+  margin-top: 0.2em;
+  font-weight: 700;
+}
+.timeline-carousel-label {
+  font-size: 1.08em;
+  color: #222;
+  margin-top: 0.1em;
+  text-align: center;
+  max-width: 140px;
+  font-weight: 600;
+}
+.timeline-carousel-desc {
+  font-size: 0.98em;
+  color: #444;
+  margin-top: 0.2em;
+  text-align: center;
+  max-width: 180px;
+}
+.timeline-carousel-dates {
+  display: flex;
+  justify-content: center;
+  gap: 2.5em;
+  margin-bottom: 1.2em;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.timeline-carousel-dates::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 4px;
+  background: linear-gradient(90deg, #0a3a66 0%, #f7c873 100%);
+  z-index: 0;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+.timeline-carousel-date-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #f7c873;
+  margin: 0 0.3em;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 700px) {
+  .timeline-carousel-track {
+    gap: 1.2em;
+    max-width: 98vw;
+  }
+  .timeline-carousel-img {
+    width: 60px;
+    height: 60px;
+  }
+  .timeline-carousel-label, .timeline-carousel-desc {
+    max-width: 90vw;
+    font-size: 0.95em;
+  }
+}

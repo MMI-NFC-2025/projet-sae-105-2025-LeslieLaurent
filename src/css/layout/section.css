@@ -1,0 +1,55 @@
+/* Section Styles */
+section {
+	scroll-margin-top: 100px;
+}
+
+section {
+	position: relative;
+}
+
+/* Common Section Heading Styles */
+section h2 {
+	word-break: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+/* Spacing */
+section + section {
+	margin-top: 0;
+}
+
+/* Background Patterns */
+section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: 
+		radial-gradient(circle at 20% 50%, rgba(160, 12, 9, 0.03) 0%, transparent 50%),
+		radial-gradient(circle at 80% 80%, rgba(10, 58, 102, 0.03) 0%, transparent 50%);
+	pointer-events: none;
+	z-index: 0;
+}
+
+section > * {
+	position: relative;
+	z-index: 1;
+}
+
+/* Print Styles */
+@media print {
+	section {
+		page-break-inside: avoid;
+		margin-bottom: 2cm;
+	}
+}
+
+/* Focus Visible for Better Keyboard Navigation */
+*:focus-visible {
+	outline: 2px solid var(--red);
+	outline-offset: 2px;
+	border-radius: 2px;
+}

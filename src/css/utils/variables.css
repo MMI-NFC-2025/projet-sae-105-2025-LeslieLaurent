@@ -1,0 +1,31 @@
+:root{
+  --body-text:#000000;
+  --fond:#f5f4ef;
+  --navy:#002455;
+  --red:#a20c09;
+  --white:#ffffff;
+}
+
+:root{
+  --txt-info:0.875rem;
+  --body:1rem;
+  --h3:1.125rem;
+  --h2:1.5rem;
+  --chiffre:1.875rem;
+  --h1:1.875rem;
+  --text-6x1:3.75rem;
+} 
+
+:root{
+  --space-xs:0.0625rem;
+  --space-sm:0.125rem;
+  --space-base:0.25rem;
+  --space-md:0.5rem;
+  --space-lg:0.75rem;
+  --space-xl:1rem;
+  --space-2xl:1.25rem;
+  --space-3xl:1.5rem;
+  --space-4xl:2rem;
+  --space-5xl:2.5rem;
+  --space-6xl:3.25rem;
+}

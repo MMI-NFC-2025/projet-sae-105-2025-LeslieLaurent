@@ -1,0 +1,64 @@
+/* About Us page enhancements */
+.about-hero {
+  background: linear-gradient(120deg, #b02a45 60%, #0a3a66 100%);
+  color: #fff;
+  padding: 2.5em 0 2em 0;
+  text-align: center;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+}
+.about-hero h1 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+.about-hero .lead {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  margin: 2.5em 0 2em 0;
+}
+@media (min-width: 700px) {
+  .about-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.about-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  padding: 1.5em 1.5em 1.2em 1.5em;
+  border-left: 5px solid #b02a45;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.about-card:hover {
+  box-shadow: 0 4px 24px rgba(10,58,102,0.13);
+  border-left: 5px solid #0a3a66;
+}
+.about-card h2 {
+  color: #0a3a66;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+.about-card p {
+  color: #444;
+  font-size: 1.05em;
+}
+.about-author {
+  margin: 2.5em auto 0 auto;
+  text-align: center;
+  background: #f7f8fa;
+  border-radius: 10px;
+  padding: 1.2em 1.5em;
+  max-width: 400px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.about-author strong {
+  color: #b02a45;
+  font-size: 1.1em;
+}

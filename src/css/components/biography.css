@@ -1,0 +1,189 @@
+.biography {
+	padding: var(--space-2xl) var(--space-lg);
+	background: var(--fond);
+	position: relative;
+}
+
+.bio-title {
+	text-align: center;
+	font-size: clamp(2rem, 8vw, 3rem);
+	color: var(--navy);
+	margin-bottom: var(--space-sm);
+}
+
+.bio-subtitle {
+	text-align: center;
+	font-size: var(--h2);
+	color: var(--red);
+	margin-top: 0;
+	margin-bottom: var(--space-3xl);
+	font-weight: 600;
+}
+
+.bio-hero {
+	text-align: center;
+	margin: 0 auto var(--space-3xl);
+	padding: var(--space-2xl);
+	background: var(--white);
+	border-radius: 20px;
+	color: var(--navy);
+	max-width: 400px;
+}
+
+.bio-hero img {
+	width: 100%;
+	max-width: 280px;
+	height: auto;
+	border-radius: 8px;
+	margin: 0 auto var(--space-xl);
+	display: block;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.bio-hero figcaption {
+	color: var(--body-text);
+	font-size: 0.95rem;
+	line-height: 1.8;
+	max-width: 100%;
+	margin: 0;
+}
+
+.bio-timeline {
+	position: relative;
+	padding: 0;
+	margin: 0 auto;
+	max-width: 500px;
+	background: var(--navy);
+	border-radius: 32px;
+	padding: var(--space-2xl);
+}
+
+.timeline-item {
+	position: relative;
+	padding: var(--space-xl) 0 var(--space-xl) var(--space-3xl);
+	display: block;
+}
+
+.timeline-item:not(:last-child) {
+	padding-bottom: var(--space-2xl);
+}
+
+.timeline-marker {
+	position: absolute;
+	left: 18px;
+	top: var(--space-xl);
+	width: auto;
+}
+
+.timeline-dot {
+	display: none;
+}
+
+
+.timeline-content h2 {
+	color: var(--fond);
+	font-size: clamp(1.1rem, 4vw, 1.3rem);
+	margin: 0 0 var(--space-md) 0;
+	font-weight: 700;
+}
+
+.timeline-content p {
+	color: var(--fond);
+	font-size: 0.9rem;
+	line-height: 1.6;
+	margin: 0 0 var(--space-lg) 0;
+}
+
+.timeline-image {
+	margin: var(--space-lg) 0 0 0;
+	padding: 0;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.timeline-image img {
+	max-width: 240px;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-image img:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.bio-timeline::before {
+	content: '';
+	position: absolute;
+	left: 18px;
+	top: var(--space-2xl);
+	bottom: var(--space-2xl);
+	width: 2px;
+	background: var(--fond);
+}
+
+@media (min-width: 768px) {
+	.bio-timeline {
+		max-width: 550px;
+	}
+
+	.timeline-content h2 {
+		font-size: 1.35rem;
+	}
+
+	.timeline-image img {
+		max-width: 280px;
+	}
+}
+
+@media (max-width: 480px) {
+	.bio-title {
+		font-size: 1.5rem;
+	}
+
+	.bio-hero {
+		padding: var(--space-lg);
+		border-radius: 16px;
+		max-width: 100%;
+	}
+
+	.bio-hero img {
+		max-width: 220px;
+	}
+
+	.bio-timeline {
+		border-radius: 24px;
+		padding: var(--space-lg);
+	}
+
+	.timeline-item {
+		padding-left: var(--space-2xl);
+	}
+
+	.timeline-dot {
+		width: 20px;
+		height: 20px;
+		left: 10px;
+		transform: translateX(-50%);
+	}
+
+	.bio-timeline::before {
+		left: 10px;
+	}
+
+	.timeline-image img {
+		max-width: 200px;
+	}
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+	.timeline-dot,
+	.timeline-image img {
+		transition: none;
+	}
+}
