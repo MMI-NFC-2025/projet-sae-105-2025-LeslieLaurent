@@ -144,6 +144,7 @@
 	.bio-title {
 		font-size: 1.5rem;
 	}
+
 	.bio-hero {
 		padding: var(--space-lg);
 		border-radius: 16px;
