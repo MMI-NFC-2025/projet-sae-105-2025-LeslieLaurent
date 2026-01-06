@@ -6,5 +6,5 @@
 - NOM : Laurent
 - PRÉNOM : Leslie
 - GROUPE : A1
-- URL du site :
-- URL FIGMA :
+- URL du site :http://lisemeitner.leslie-laurent.fr
+- URL FIGMA :https://www.figma.com/design/yM2CoqppHZ9OLX9kj6JltL/LAURENT_LESLIE_A1_Maquette_ProjetS1?node-id=64-238&t=4zcWkVTyPuSdvhIE-1
