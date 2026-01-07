@@ -99,6 +99,5 @@ document.getElementById('matilda-next').tabIndex = 0;
 document.getElementById('matilda-prev').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') goPrev(); });
 document.getElementById('matilda-next').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') goNext(); });
 
-// Initial render
 renderCarousel();
 renderDates();
