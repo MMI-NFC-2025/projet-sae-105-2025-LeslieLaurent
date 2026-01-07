@@ -1,8 +1,6 @@
-// Sélecteurs rapides
 function $(selector) { return document.querySelector(selector); }
 function $$(selector) { return document.querySelectorAll(selector); }
 
-// MENU MOBILE
 var menuBtn = document.getElementById('menu-toggle');
 var nav = document.getElementById('primary-nav-main');
 if (menuBtn && nav) {
@@ -13,7 +11,6 @@ if (menuBtn && nav) {
 		nav.classList.toggle('open');
 		document.body.classList.toggle('menu-open');
 	});
-	// Fermer le menu au clic sur un lien
 	nav.querySelectorAll('a').forEach(function(link) {
 		link.addEventListener('click', function() {
 			menuBtn.setAttribute('aria-expanded', 'false');
@@ -22,7 +19,6 @@ if (menuBtn && nav) {
 			document.body.classList.remove('menu-open');
 		});
 	});
-	// Fermer avec Echap
 	document.addEventListener('keydown', function(e) {
 		if (e.key === 'Escape') {
 			menuBtn.setAttribute('aria-expanded', 'false');
@@ -33,7 +29,6 @@ if (menuBtn && nav) {
 	});
 }
 
-// SCROLL DOUX pour les liens internes
 document.querySelectorAll('a[href^="#"]').forEach(function(link) {
 	link.addEventListener('click', function(e) {
 		var href = link.getAttribute('href');
@@ -43,8 +38,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function(link) {
 		}
 	});
 });
-
-// (La logique avancée du timeline/carrousel est gérée dans timeline-carousel.js)
 
 if ('IntersectionObserver' in window) {
 	var images = document.querySelectorAll('img[loading="lazy"]');

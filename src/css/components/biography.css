@@ -180,7 +180,6 @@
 	}
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
 	.timeline-dot,
 	.timeline-image img {

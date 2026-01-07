@@ -1,6 +1,5 @@
 @import "variables.css";
 
-/* Screen reader only - for accessibility */
 .sr-only {
 	position: absolute;
 	width: 1px;
@@ -13,7 +12,6 @@
 	border-width: 0;
 }
 
-/* Container utility */ 
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -21,7 +19,6 @@
 	width: 100%;
 }
 
-/* Base Styles */
 * {
 	box-sizing: border-box;
 }
@@ -41,7 +38,6 @@ body {
 	font-size: 16px;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.2;
 	font-weight: 700;
@@ -60,12 +56,10 @@ h3 {
 	font-size: var(--h3);
 }
 
-/* Paragraphs */
 p {
 	margin: var(--space-xl) 0;
 }
 
-/* Links */
 a {
 	color: var(--navy);
 	text-decoration: underline;
@@ -83,7 +77,6 @@ a:focus {
 	border-radius: 2px;
 }
 
-/* Buttons */
 button {
 	font-family: inherit;
 	font-size: inherit;
@@ -106,14 +99,12 @@ button:focus {
 	outline-offset: 2px;
 }
 
-/* Images */
 img {
 	max-width: 100%;
 	height: auto;
 	display: block;
 }
 
-/* Lists */
 ul, ol {
 	margin: var(--space-xl) 0;
 	padding-left: var(--space-4xl);
@@ -123,7 +114,6 @@ li {
 	margin-bottom: var(--space-md);
 }
 
-/* Figures */
 figure {
 	margin: var(--space-3xl) 0;
 	padding: 0;
@@ -136,7 +126,6 @@ figcaption {
 	font-style: italic;
 }
 
-/* Color Variables */
 :root {
 	--accent: var(--navy);
 	--accent-2: var(--red);
@@ -146,7 +135,6 @@ figcaption {
 	--radius: 8px;
 }
 
-/* Print Styles */
 @media print {
 	body {
 		background: white;
@@ -167,7 +155,6 @@ figcaption {
 	}
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
 	*,
 	*::before,
@@ -179,7 +166,6 @@ figcaption {
 	}
 }
 
-/* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: #1a1a1a;

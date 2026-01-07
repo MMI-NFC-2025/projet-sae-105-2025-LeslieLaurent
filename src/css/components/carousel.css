@@ -1,4 +1,3 @@
-/* Effet visuel pour les livres cliquables */
 .book-link {
 	display: inline-block;
 	border-radius: 4px;
@@ -11,7 +10,6 @@
 	outline: none;
 	cursor: pointer;
 }
-/* Carousel Component */
 
 .carousel-container {
 	--carousel-visible: 1;
@@ -157,7 +155,6 @@
 	outline-offset: 4px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 960px) {
 	.carousel-item--book {
 		min-width: calc(100% / 2);
@@ -184,7 +181,6 @@
 	}
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
 	.carousel-track {
 		transition: none;

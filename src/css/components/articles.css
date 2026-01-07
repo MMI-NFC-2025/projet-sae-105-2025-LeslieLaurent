@@ -126,7 +126,6 @@
 	font-style: italic;
 }
 
-/* Blockquote */
 .article-content blockquote {
 	border-left: 4px solid var(--red);
 	padding: var(--space-2xl);
@@ -150,7 +149,6 @@
 	font-style: normal;
 }
 
-/* Meitnerium Card */
 .meitnerium-card {
 	display: flex;
 	flex-direction: column;

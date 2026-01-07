@@ -1,4 +1,3 @@
-/* Glossary styles for attractive layout */
 .glossary-attractive {
   background: #fff;
   border-radius: 18px;
@@ -57,7 +56,6 @@
   text-decoration: underline solid;
 }
 
-/* Other projects section */
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;

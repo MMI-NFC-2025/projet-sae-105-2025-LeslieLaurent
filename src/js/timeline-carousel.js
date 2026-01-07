@@ -1,4 +1,3 @@
-// Matilda Timeline Carousel Data & Logic
 const matildaData = [
   {
     name: "Matilda Joslyn Gage",
